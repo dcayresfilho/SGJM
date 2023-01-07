@@ -1,0 +1,197 @@
+l_biotipo = Label(tbCorporal, font=('Ivy 12'),
+                  text='BIOTIPO CUTÂNEO', fg='#414141')
+l_biotipo.place(x=5, y=80)
+
+l_acne = Label(tbCorporal, font=('Ivy 12'),
+               text='Pele com acne', fg='#414141')
+l_acne.place(x=5, y=100)
+e_alipica = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Alípica', fg='#414141')
+e_lipidica = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Lipídica', fg='#414141')
+e_eudermica = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Eudérmica', fg='#414141')
+e_mista = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Mista', fg='#414141')
+e_madura = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Madura', fg='#414141')
+e_alipica.place(x=5, y=120)
+e_lipidica.place(x=5, y=140)
+e_eudermica.place(x=5, y=160)
+e_mista.place(x=5, y=180)
+e_madura.place(x=5, y=200)
+
+l_discromias = Label(tbCorporal, font=('Ivy 12'),
+                     text='Discromias', fg='#414141')
+l_discromias.place(x=130, y=100)
+e_grau1 = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Grau I ', fg='#414141')
+e_grau2 = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Grau II', fg='#414141')
+e_grau3 = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Grau III', fg='#414141')
+e_grau4 = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Grau VI', fg='#414141')
+e_grau5 = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Grau V', fg='#414141')
+e_grau1.place(x=130, y=120)
+e_grau2.place(x=130, y=140)
+e_grau3.place(x=130, y=160)
+e_grau4.place(x=130, y=180)
+e_grau5.place(x=130, y=200)
+
+l_rugas = Label(tbCorporal, font=('Ivy 12'),
+                text='Rugas', fg='#414141')
+l_rugas.place(x=230, y=100)
+e_efelides = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Efélides ', fg='#414141')
+e_gravidicas = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Mancha gravídica ', fg='#414141')
+e_melasma = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Melasma', fg='#414141')
+e_hipocromias = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Hipocromias', fg='#414141')
+e_senis = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Manchas senis', fg='#414141')
+e_efelides.place(x=230, y=120)
+e_gravidicas.place(x=230, y=140)
+e_melasma.place(x=230, y=160)
+e_hipocromias.place(x=230, y=180)
+e_senis.place(x=230, y=200)
+
+
+l_profundas = Label(tbCorporal, font=('Ivy 12'),
+                    text='Superficiais ou profundas', fg='#414141')
+l_profundas.place(x=400, y=100)
+e_dinamicas = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Dinâmicas ', fg='#414141')
+e_estaticas = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Estáticas', fg='#414141')
+e_gravitacionais = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Gravitacionais', fg='#414141')
+e_sonos = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Sono', fg='#414141')
+e_dinamicas.place(x=400, y=120)
+e_estaticas.place(x=400, y=140)
+e_gravitacionais.place(x=400, y=160)
+e_sonos.place(x=400, y=180)
+
+l_olheiras = Label(tbCorporal, font=('Ivy 12'),
+                   text='Olheiras', fg='#414141')
+l_olheiras.place(x=590, y=100)
+e_olhos = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Sim ', fg='#414141')
+e_olhon = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Não', fg='#414141')
+e_olhos.place(x=590, y=120)
+e_olhon.place(x=590, y=140)
+
+
+l_tipo = Label(tbCorporal, font=('Ivy 12'),
+               text='Tipo/Observação', fg='#414141')
+l_tipo.place(x=690, y=100)
+e_tipo = Text(tbCorporal, relief='solid', width=20,
+              font=('Ivy 8'))
+e_tipo.place(x=690, y=130, height=70)
+
+l_flacidez = Label(tbCorporal, font=('Ivy 12'),
+                   text='Flacidez: Quantificar os itens abaixo\n (+ leve, ++ moderado, +++ Intenso, ++++ grave) ', fg='#414141')
+l_flacidez.place(x=5, y=250)
+e_tissular = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Tissular ', fg='#414141')
+e_muscular = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Muscular', fg='#414141')
+e_tissular.place(x=5, y=290)
+e_muscular.place(x=105, y=290)
+
+l_localtissular = Label(tbCorporal, font=('Ivy 12'),
+                        text='Localização da flacidez tissular', fg='#414141')
+l_localtissular.place(x=5, y=320)
+e_localtissular = Text(tbCorporal, relief='solid', width=30,
+                       font=('Ivy 8'))
+e_localtissular.place(x=5, y=350, height=30)
+
+l_localmuscular = Label(tbCorporal, font=('Ivy 12'),
+                        text='Localização da flacidez muscular', fg='#414141')
+l_localmuscular.place(x=5, y=380)
+e_localmuscular = Text(tbCorporal, relief='solid', width=30,
+                       font=('Ivy 8'))
+e_localmuscular.place(x=5, y=410, height=30)
+
+
+l_cutaneo = Label(tbCorporal, font=('Ivy 12'),
+                  text='Estado cutâneo', fg='#414141')
+l_cutaneo.place(x=250, y=320)
+e_cutaneonormal = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Normal ', fg='#414141')
+e_cutaneodesidratado = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Desidratado', fg='#414141')
+e_cutaneosensibilizado = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Sensibilizado', fg='#414141')
+e_cutaneoacneico = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Acneico', fg='#414141')
+e_cutaneoseborreico = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Seborreico', fg='#414141')
+e_cutaneonormal.place(x=250, y=340)
+e_cutaneodesidratado.place(x=250, y=360)
+e_cutaneosensibilizado.place(x=250, y=380)
+e_cutaneoacneico.place(x=250, y=400)
+e_cutaneoseborreico.place(x=250, y=420)
+
+l_lessao = Label(tbCorporal, font=('Ivy 12'),
+                 text='Lesões', fg='#414141')
+l_lessao.place(x=400, y=320)
+e_comedoes = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Comedões abertos ', fg='#414141')
+e_ptose = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Ptose ', fg='#414141')
+e_comedoesfechados = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Comedões fechados ', fg='#414141')
+e_eritema = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Eritema ', fg='#414141')
+e_foliculite = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Foliculite ', fg='#414141')
+e_ceratose = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Ceratose senil ', fg='#414141')
+e_cisto = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Cisto ', fg='#414141')
+e_psoriase = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Psoríase ', fg='#414141')
+e_millium = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Millium ', fg='#414141')
+e_cicatriz = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Cicatriz ', fg='#414141')
+e_escoriacao = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Escoriação ', fg='#414141')
+e_queloide = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Quelóide ', fg='#414141')
+e_seborreia = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Seborréia ', fg='#414141')
+e_verrugas = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Verrugas ', fg='#414141')
+e_herpes = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Herpes ', fg='#414141')
+e_rosacea = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Rosácea ', fg='#414141')
+e_telangiectasia = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Telangiectasia ', fg='#414141')
+e_xantelasma = Checkbutton(tbCorporal, font=(
+    'Ivy 12'), text='Xantelasma ', fg='#414141')
+e_comedoes.place(x=400, y=340)
+e_ptose.place(x=400, y=360)
+e_comedoesfechados.place(x=400, y=380)
+e_eritema.place(x=400, y=400)
+e_foliculite.place(x=400, y=420)
+e_rosacea.place(x=400, y=440)
+e_ceratose.place(x=590, y=340)
+e_cisto.place(x=590, y=360)
+e_psoriase.place(x=590, y=380)
+e_millium.place(x=590, y=400)
+e_cicatriz.place(x=590, y=420)
+e_telangiectasia.place(x=590, y=440)
+e_escoriacao.place(x=720, y=340)
+e_queloide.place(x=720, y=360)
+e_seborreia.place(x=720, y=380)
+e_verrugas.place(x=720, y=400)
+e_herpes.place(x=720, y=420)
+e_xantelasma.place(x=720, y=440)

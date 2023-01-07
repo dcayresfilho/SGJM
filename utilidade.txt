@@ -1,0 +1,147 @@
+from tkinter import *
+from tkinter import ttk
+from tkcalendar import Calendar, DateEntry
+from tkinter import messagebox
+from banco import *
+from datetime import date
+
+
+def ficha_avaliacao(event):
+    ficha = Tk()
+    ficha.geometry('900x600')
+    ficha.resizable(False, False)
+    ficha.configure(background='#f9f9f9')
+    ficha.title('FICHA DE AVALIAÇÃO')
+
+    styl = ttk.Style()
+    styl.configure('roxo.TSeparator', background='#7b4f86',)
+    ttk.Separator(ficha, takefocus=0, orient=HORIZONTAL, style='roxo.TSeparator', ).place(
+        x=10, y=70, relwidth=0.97, relheight=0.005)
+
+    l_titulo = Label(master=ficha, text='❢ FICHA DE AVALIAÇÃO', anchor=NW,
+                     font=('Ivy 25 bold'), bg='#f9f9f9', fg='#7b4f86')
+    l_titulo.place(x=25, y=20)
+
+    lista = nomes()
+    escolaridade = ['Fundamental Completo', 'Fundamental Incompleto',
+                    'Médio Completo', 'Médio Incompleto', 'Superior Completo', 'Superios Incompleto']
+
+    l_cliente = Label(ficha, font=('Ivy 12'),
+                      text='Cliente:', bg='#f9f9f9', fg='#414141')
+    l_cliente.place(x=20, y=90)
+    c_cliente = ttk.Combobox(
+        ficha, font=('Ivy 12'), state='readonly', width=20)
+    c_cliente['values'] = [
+        item for result in lista for item in result if item]
+    c_cliente.place(x=120, y=90)
+
+    l_escolaridade = Label(ficha, font=('Ivy 12'),
+                           text='Escolaridade:', bg='#f9f9f9', fg='#414141')
+    l_escolaridade.place(x=20, y=130)
+    c_escolaridade = ttk.Combobox(ficha, font=(
+        'Ivy 12'), state='readonly', width=20)
+    c_escolaridade['values'] = escolaridade
+    c_escolaridade.place(x=120, y=130)
+
+    l_profissao = Label(ficha, font=('Ivy 12'),
+                        text='Profissão:', bg='#f9f9f9', fg='#414141')
+    l_profissao.place(x=20, y=170)
+    e_profissao = Entry(ficha, relief='solid', width=22,
+                        justify='left', font=('Ivy 12'))
+    e_profissao.place(x=120, y=170)
+
+    l_patologia = Label(ficha, font=('Ivy 12'),
+                        text='Patologia:', bg='#f9f9f9', fg='#414141')
+    l_patologia.place(x=20, y=210)
+    e_patologia = Entry(ficha, relief='solid', width=22,
+                        justify='left', font=('Ivy 12'))
+    e_patologia.place(x=120, y=210)
+
+    l__medicamento = Label(ficha, font=('Ivy 12'),
+                           text='Medicamento:', bg='#f9f9f9', fg='#414141')
+    l__medicamento.place(x=20, y=250)
+    e_medicamento = Entry(ficha, relief='solid', width=22,
+                          justify='left', font=('Ivy 12'))
+    e_medicamento.place(x=120, y=250)
+
+    agua = ['Menos de 1L/Dia', '1 Litro/Dia',
+            '2 Litros/Dia', '3 Litros/Dia', 'Mais de 4L/Dia']
+    l_agua = Label(ficha, font=('Ivy 12'),
+                   text='Agua(L/Dia):', bg='#f9f9f9', fg='#414141')
+    l_agua.place(x=20, y=290)
+    c_agua = ttk.Combobox(ficha, font=(
+        'Ivy 12'), state='readonly', width=20)
+    c_agua['values'] = agua
+    c_agua.place(x=120, y=290)
+
+    simnao = ['Sim', 'Não']
+    l_exercicios = Label(ficha, font=('Ivy 12'),
+                         text='Exercicios:', bg='#f9f9f9', fg='#414141')
+    l_exercicios.place(x=20, y=330)
+    e_exercicios = Entry(ficha, relief='solid', width=22,
+                         justify='left', font=('Ivy 12'))
+    e_exercicios.place(x=120, y=330)
+
+    l_alimentacao = Label(ficha, font=('Ivy 12'),
+                          text='Alimentação:', bg='#f9f9f9', fg='#414141')
+    l_alimentacao.place(x=20, y=370)
+    check_acucar = Checkbutton(
+        ficha, text='Açucar/Doces', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_acucar.place(x=120, y=370)
+    check_frutas = Checkbutton(
+        ficha, text='Frutas', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_leite = Checkbutton(
+        ficha, text='Leite/Derivados', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_fritura = Checkbutton(
+        ficha, text='Frituras/Gordura', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_verdura = Checkbutton(
+        ficha, text='Verduras', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_industrializados = Checkbutton(
+        ficha, text='Industrializados', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_massa = Checkbutton(
+        ficha, text='Massa/Molho', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_legumes = Checkbutton(
+        ficha, text='Legumes', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_diet = Checkbutton(
+        ficha, text='Diet/Light', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_cereais = Checkbutton(
+        ficha, text='Cereais', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_oleaginosas = Checkbutton(
+        ficha, text='Oleaginosas', bg='#f9f9f9', fg='#414141', font=('Ivy 12'))
+    check_frutas.place(x=120, y=390)
+    check_leite.place(x=120, y=410)
+    check_fritura.place(x=120, y=430)
+    check_verdura.place(x=120, y=450)
+    check_industrializados.place(x=120, y=470)
+    check_massa.place(x=120, y=490)
+    check_legumes.place(x=120, y=510)
+    check_diet.place(x=120, y=530)
+    check_cereais.place(x=120, y=550)
+    check_oleaginosas.place(x=120, y=570)
+
+    l_sono = Label(ficha, font=('Ivy 12'),
+                   text='Sono:', bg='#f9f9f9', fg='#414141')
+    l_sono.place(x=330, y=90)
+    e_sono = Entry(ficha, relief='solid', width=22,
+                   justify='left', font=('Ivy 12'))
+    e_sono.place(x=430, y=90)
+
+    l_tabagismo = Label(ficha, font=('Ivy 12'),
+                        text='Tabagismo:', bg='#f9f9f9', fg='#414141')
+    l_tabagismo.place(x=330, y=130)
+    c_tabagismo = ttk.Combobox(ficha, font=(
+        'Ivy 12'), state='readonly', width=20)
+    c_tabagismo['values'] = simnao
+    c_tabagismo.place(x=430, y=130)
+
+    l_alcool = Label(ficha, font=('Ivy 12'),
+                     text='Alcool', bg='#f9f9f9', fg='#414141')
+    l_alcool.place(x=330, y=170)
+    e_alcool = Entry(ficha, relief='solid', width=22,
+                     justify='left', font=('Ivy 12'))
+    e_alcool.place(x=430, y=170)
+
+    ficha.mainloop()
+
+
+ficha_avaliacao(Event)
